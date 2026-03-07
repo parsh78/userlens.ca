@@ -1,0 +1,935 @@
+<!-- PASTE INTO: Settings → Advanced → Code Injection → FOOTER -->
+<!-- OR: Add a Code Block on the page and paste there -->
+<body>
+
+<!-- ── Cursor ── -->
+<div id="ul-dot"></div>
+<div id="ul-ring"></div>
+
+<!-- ══════════════════════════════════════
+     NAV
+══════════════════════════════════════ -->
+<nav id="ul-nav">
+  <a href="#" class="ul-logo">
+    <svg class="ul-logo-mark" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+      <circle class="ul-logo-orbit" cx="12" cy="12" r="9.5" stroke="rgba(61,95,224,.28)" stroke-width="1.5" stroke-dasharray="5 2.5"/>
+      <circle cx="12" cy="12" r="6.5" stroke="var(--accent)" stroke-width="1.8" fill="rgba(61,95,224,.07)"/>
+      <circle class="ul-logo-iris" cx="12" cy="12" r="3" fill="rgba(61,95,224,.18)" stroke="var(--accent)" stroke-width="1.2"/>
+      <circle cx="12" cy="12" r="1.3" fill="var(--accent)"/>
+      <line x1="17" y1="17" x2="25" y2="25" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round"/>
+    </svg>
+    <span class="ul-logo-text">User<span>Lens</span></span>
+  </a>
+  <ul class="ul-nav-links">
+    <li><a href="#ul-problem">Why it matters</a></li>
+    <li><a href="#ul-zones">Services</a></li>
+    <li><a href="#ul-work">Work</a></li>
+    <li><a href="#ul-about">About</a></li>
+    <li><a href="https://calendly.com/archie-connect/30min" target="_blank" rel="noopener" class="ul-nav-cta">Book a Call</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section id="ul-hero">
+
+  <!-- animated orb background -->
+  <div class="ul-orb-field">
+    <div class="ul-dots"></div>
+    <div class="ul-orb ul-orb-blue  anim-a" style="width:640px;height:640px;top:-140px;right:-80px"></div>
+    <div class="ul-orb ul-orb-indigo anim-b" style="width:420px;height:420px;bottom:-60px;left:18%"></div>
+    <div class="ul-orb ul-orb-soft   anim-c" style="width:320px;height:320px;top:35%;left:-80px"></div>
+  </div>
+
+  <div class="ul-hero-content">
+    <div class="ul-eyebrow">
+      <span>Customer Intelligence for Leaders</span>
+    </div>
+    <h1 class="ul-h1">
+      You know something's off.<br>
+      And it's too important<br>
+      to get <em>wrong.</em>
+    </h1>
+    <p class="ul-sub">
+      Helping <span id="ul-word">business owners</span> understand
+      what's actually happening with their customers —
+      so they make better decisions before they build,
+      launch, or invest.
+    </p>
+    <div class="ul-hero-btns">
+      <a href="#ul-cta" class="ul-btn-primary">
+        Book a Discovery Call
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#ul-work" class="ul-btn-text">See the work <span>→</span></a>
+    </div>
+  </div>
+
+  <!-- hero visual: lens SVG + floating stat cards -->
+  <div class="ul-hero-vis">
+    <svg class="ul-lens-svg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- outer glow ring -->
+      <circle cx="200" cy="200" r="185" stroke="rgba(61,95,224,.06)" stroke-width="1" fill="rgba(61,95,224,.02)"/>
+      <circle cx="200" cy="200" r="170" stroke="rgba(61,95,224,.14)" stroke-width="1.5"/>
+      <!-- spinning arc A -->
+      <g class="ul-arc-cw">
+        <path d="M200 32 A168 168 0 0 1 354 290" stroke="rgba(61,95,224,.55)" stroke-width="2" stroke-dasharray="14 7" fill="none" stroke-linecap="round"/>
+      </g>
+      <!-- spinning arc B -->
+      <g class="ul-arc-ccw">
+        <path d="M200 368 A168 168 0 0 1 46 110" stroke="rgba(110,143,245,.40)" stroke-width="1.5" stroke-dasharray="7 16" fill="none" stroke-linecap="round"/>
+      </g>
+      <!-- inner lens -->
+      <circle cx="200" cy="200" r="100" stroke="rgba(61,95,224,.28)" stroke-width="2" class="ul-lens-pulse"/>
+      <circle cx="200" cy="200" r="60" fill="rgba(61,95,224,.08)" stroke="rgba(61,95,224,.38)" stroke-width="2"/>
+      <!-- iris -->
+      <circle cx="200" cy="200" r="28" fill="rgba(61,95,224,.18)" stroke="var(--accent)" stroke-width="2.5"/>
+      <circle cx="200" cy="200" r="10" fill="var(--accent)" opacity=".9"/>
+      <!-- crosshair -->
+      <line x1="200" y1="30"  x2="200" y2="70"  stroke="rgba(61,95,224,.3)" stroke-width="1"/>
+      <line x1="200" y1="330" x2="200" y2="370" stroke="rgba(61,95,224,.3)" stroke-width="1"/>
+      <line x1="30"  y1="200" x2="70"  y2="200" stroke="rgba(61,95,224,.3)" stroke-width="1"/>
+      <line x1="330" y1="200" x2="370" y2="200" stroke="rgba(61,95,224,.3)" stroke-width="1"/>
+      <!-- corner brackets -->
+      <path d="M62 62 L62 82 M62 62 L82 62"   stroke="rgba(61,95,224,.45)" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M338 62 L338 82 M338 62 L318 62" stroke="rgba(61,95,224,.45)" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M62 338 L62 318 M62 338 L82 338"  stroke="rgba(61,95,224,.45)" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M338 338 L338 318 M338 338 L318 338" stroke="rgba(61,95,224,.45)" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- tick marks -->
+      <line x1="200" y1="94"  x2="200" y2="100" stroke="rgba(61,95,224,.4)" stroke-width="1.5"/>
+      <line x1="200" y1="300" x2="200" y2="306" stroke="rgba(61,95,224,.4)" stroke-width="1.5"/>
+      <line x1="94"  y1="200" x2="100" y2="200" stroke="rgba(61,95,224,.4)" stroke-width="1.5"/>
+      <line x1="300" y1="200" x2="306" y2="200" stroke="rgba(61,95,224,.4)" stroke-width="1.5"/>
+    </svg>
+
+    <!-- Floating stat cards -->
+    <div class="ul-fsc ul-fsc-1">
+      <div class="ul-fsc-n" data-count="66" data-suffix="%">66%</div>
+      <div class="ul-fsc-l">Drop in customer exit rate<br>after a single research sprint</div>
+      <div class="ul-fsc-bar"><span style="width:66%"></span></div>
+    </div>
+    <div class="ul-fsc ul-fsc-2">
+      <div class="ul-fsc-n" data-count="3" data-suffix="×">3×</div>
+      <div class="ul-fsc-l">Active user growth<br>post-CX redesign</div>
+      <div class="ul-fsc-bar"><span style="width:90%"></span></div>
+    </div>
+    <div class="ul-fsc ul-fsc-3">
+      <div class="ul-fsc-n" data-count="10" data-suffix="+">10+</div>
+      <div class="ul-fsc-l">Industries served<br>from startups to enterprise</div>
+      <div class="ul-fsc-bar"><span style="width:75%"></span></div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════════
+     TICKER
+══════════════════════════════════════ -->
+<div id="ul-ticker" aria-hidden="true">
+  <div class="ul-ticker-track">
+    <span class="ul-ticker-item">Evidence-Based Strategy</span>
+    <span class="ul-ticker-item ul-ticker-industry">FinTech</span>
+    <span class="ul-ticker-item">Customer Discovery</span>
+    <span class="ul-ticker-item ul-ticker-industry">Retail</span>
+    <span class="ul-ticker-item">De-Risk Every Decision</span>
+    <span class="ul-ticker-item ul-ticker-industry">Travel</span>
+    <span class="ul-ticker-item">CX & Product Intelligence</span>
+    <span class="ul-ticker-item ul-ticker-industry">Real Estate</span>
+    <span class="ul-ticker-item">Strategic Clarity</span>
+    <span class="ul-ticker-item ul-ticker-industry">Technology</span>
+    <span class="ul-ticker-item">Founder-Led Consulting</span>
+    <span class="ul-ticker-item ul-ticker-industry">Healthcare</span>
+    <span class="ul-ticker-item">From Startups to Enterprise</span>
+    <span class="ul-ticker-item ul-ticker-industry">E-Commerce</span>
+    <!-- duplicate for seamless loop -->
+    <span class="ul-ticker-item">Evidence-Based Strategy</span>
+    <span class="ul-ticker-item ul-ticker-industry">FinTech</span>
+    <span class="ul-ticker-item">Customer Discovery</span>
+    <span class="ul-ticker-item ul-ticker-industry">Retail</span>
+    <span class="ul-ticker-item">De-Risk Every Decision</span>
+    <span class="ul-ticker-item ul-ticker-industry">Travel</span>
+    <span class="ul-ticker-item">CX & Product Intelligence</span>
+    <span class="ul-ticker-item ul-ticker-industry">Real Estate</span>
+    <span class="ul-ticker-item">Strategic Clarity</span>
+    <span class="ul-ticker-item ul-ticker-industry">Technology</span>
+    <span class="ul-ticker-item">Founder-Led Consulting</span>
+    <span class="ul-ticker-item ul-ticker-industry">Healthcare</span>
+    <span class="ul-ticker-item">From Startups to Enterprise</span>
+    <span class="ul-ticker-item ul-ticker-industry">E-Commerce</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     PROBLEM SECTION
+══════════════════════════════════════ -->
+<section id="ul-problem" class="ul-section">
+
+  <div class="ul-orb-field" aria-hidden="true">
+    <div class="ul-orb ul-orb-soft anim-c" style="width:400px;height:400px;top:-80px;right:-60px;opacity:.5"></div>
+  </div>
+
+  <div class="ul-hdr ul-rv">
+    <p class="ul-section-label">The real cost of moving without evidence</p>
+    <h2 class="ul-h2">Most big decisions move forward on gut instinct.<br>The ones that don't, <em>win.</em></h2>
+    <p class="ul-lead">You're leading a business or a product — and you're being asked to commit. Build it. Launch it. Invest in it. But the information you're making decisions on is incomplete, assumed, or already outdated.</p>
+  </div>
+
+  <!-- Scannable comparison table -->
+  <div class="ul-compare ul-rv d1">
+    <div class="ul-compare-hdr">
+      <div class="ul-ch-bad">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+        Without evidence
+      </div>
+      <div class="ul-ch-divider"></div>
+      <div class="ul-ch-good">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+        With UserLens
+      </div>
+    </div>
+    <div class="ul-compare-row">
+      <div class="ul-cr-bad">Teams build features customers don't need</div>
+      <div class="ul-cr-divider"></div>
+      <div class="ul-cr-good">You know what to build — before you build it</div>
+    </div>
+    <div class="ul-compare-row">
+      <div class="ul-cr-bad">Launch misses the market — nobody saw it coming</div>
+      <div class="ul-cr-divider"></div>
+      <div class="ul-cr-good">Strategy grounded in real market signals</div>
+    </div>
+    <div class="ul-compare-row">
+      <div class="ul-cr-bad">Leadership debates data that doesn't exist</div>
+      <div class="ul-cr-divider"></div>
+      <div class="ul-cr-good">Leadership aligns fast — the evidence is clear</div>
+    </div>
+    <div class="ul-compare-row">
+      <div class="ul-cr-bad">Major investment made on the wrong problem</div>
+      <div class="ul-cr-divider"></div>
+      <div class="ul-cr-good">Investment goes toward the right problem, at the right time</div>
+    </div>
+  </div>
+
+  <div class="ul-pc ul-pc-accent ul-rv d2">
+    <div class="ul-pac-text">"The companies that pause to understand their customer before they commit — consistently outperform those that don't."</div>
+    <div class="ul-pac-stat">
+      <div class="ul-pac-num" data-count="42" data-suffix="%">42%</div>
+      <div class="ul-pac-label">of startups fail because there was no market need — the most preventable cause</div>
+      <div style="font-size:.6rem;opacity:.5;margin-top:.4rem;letter-spacing:.04em">— CB Insights</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SERVICES / ZONES
+══════════════════════════════════════ -->
+<section id="ul-zones" class="ul-section" style="background:#fff">
+
+  <div class="ul-hdr ul-rv">
+    <p class="ul-section-label">How UserLens works</p>
+    <h2 class="ul-h2">Three ways leaders work with UserLens</h2>
+    <p class="ul-lead">Whether you're about to make a major call, trying to understand what's breaking, or building the capability to keep knowing — UserLens meets you where you are.</p>
+  </div>
+
+  <div class="ul-zones-grid">
+
+    <!-- Zone 1 -->
+    <div class="ul-zc ul-rv d1">
+      <div class="ul-zc-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+      </div>
+      <p class="ul-zc-n">Zone 01</p>
+      <h3 class="ul-zc-title">De-Risk Before a Dollar Is Spent</h3>
+      <p class="ul-zc-desc">Before you sign off on a roadmap, a product, or a significant investment — get clarity on whether you're solving the right problem. UserLens builds the evidence so you can move with confidence, not assumptions.</p>
+      <div class="ul-zc-tags">
+        <span class="ul-zc-tag">Evidence before commitment</span>
+        <span class="ul-zc-tag">Market clarity</span>
+        <span class="ul-zc-tag">Decision confidence</span>
+      </div>
+    </div>
+
+    <!-- Zone 2 -->
+    <div class="ul-zc ul-rv d2">
+      <div class="ul-zc-icon">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></svg>
+      </div>
+      <p class="ul-zc-n">Zone 02</p>
+      <h3 class="ul-zc-title">Find What's Actually Breaking</h3>
+      <p class="ul-zc-desc">Numbers are down, customers are leaving, or the product isn't landing — but your team can't agree on why. UserLens goes directly to the source and brings back a clear picture of what's happening and where to focus.</p>
+      <div class="ul-zc-tags">
+        <span class="ul-zc-tag">Root cause analysis</span>
+        <span class="ul-zc-tag">Churn diagnosis</span>
+        <span class="ul-zc-tag">Experience audit</span>
+      </div>
+    </div>
+
+    <!-- Zone 3 -->
+    <div class="ul-zc ul-rv d3">
+      <div class="ul-zc-icon">
+        <svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+      </div>
+      <p class="ul-zc-n">Zone 03</p>
+      <h3 class="ul-zc-title">Build a Customer-Led Organization</h3>
+      <p class="ul-zc-desc">For leaders who want to stop making decisions in the dark — permanently. UserLens embeds customer intelligence into how your team thinks, plans, and prioritizes, so every initiative starts with evidence.</p>
+      <div class="ul-zc-tags">
+        <span class="ul-zc-tag">CX strategy</span>
+        <span class="ul-zc-tag">Research capability</span>
+        <span class="ul-zc-tag">Org alignment</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     WORK / CASE STUDIES
+══════════════════════════════════════ -->
+<section id="ul-work" class="ul-section">
+
+  <div class="ul-orb-field" aria-hidden="true">
+    <div class="ul-orb ul-orb-indigo anim-b" style="width:380px;height:380px;bottom:-80px;left:-60px;opacity:.45"></div>
+  </div>
+
+  <!-- Header + nav arrows -->
+  <div class="ul-work-hdr ul-rv">
+    <div>
+      <p class="ul-section-label">Selected work</p>
+      <h2 class="ul-h2">Evidence that moves organizations forward</h2>
+    </div>
+    <div class="ul-work-nav">
+      <button class="ul-wnav-btn" id="ul-wprev" aria-label="Previous" disabled>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      </button>
+      <span class="ul-wnav-count" id="ul-wnav-count">1 / 10</span>
+      <button class="ul-wnav-btn" id="ul-wnext" aria-label="Next">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Carousel track -->
+  <div class="ul-work-track-wrap">
+    <div class="ul-work-track" id="ul-work-track">
+
+      <!-- 1: FinTech Onboarding -->
+      <a class="ul-wc" href="userlens-case-fintech.html" target="_blank" rel="noopener">
+        <span class="ul-wc-cta">Read story →</span>
+        <div class="ul-wc-stripe"></div>
+        <div class="ul-wc-body">
+          <span class="ul-wc-tag">FinTech</span>
+          <h4 class="ul-wc-title">Onboarding was losing 87% of users before the product had a chance</h4>
+          <p class="ul-wc-desc">A trading platform watched nearly 9 in 10 signups abandon registration — and 10% of daily support capacity absorbed the fallout. A multi-lens investigation uncovered three fixable problems compliance teams had dismissed as unavoidable.</p>
+          <div class="ul-wc-metric">
+            <span class="ul-wc-num">66%</span>
+            <span class="ul-wc-meta">reduction in onboarding exit rate after redesign</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 2: Retail Stylist Tool JTBD -->
+      <a class="ul-wc" href="userlens-case-retail.html" target="_blank" rel="noopener">
+        <span class="ul-wc-cta">Read story →</span>
+        <div class="ul-wc-stripe"></div>
+        <div class="ul-wc-body">
+          <span class="ul-wc-tag">Retail · Internal Tool</span>
+          <h4 class="ul-wc-title">The stylist tool was built for stylists. It was missing the two things they actually needed.</h4>
+          <p class="ul-wc-desc">Despite significant investment, adoption of an internal app remained low. A Jobs-to-be-Done study with 500+ stylists surfaced two capabilities whose absence was making the tool unusable across every stylist role.</p>
+          <div class="ul-wc-metric">
+            <span class="ul-wc-num">3×</span>
+            <span class="ul-wc-meta">increase in active users after research-led redesign</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 3: Travel Packages -->
+      <a class="ul-wc" href="userlens-case-travel.html" target="_blank" rel="noopener">
+        <span class="ul-wc-cta">Read story →</span>
+        <div class="ul-wc-stripe"></div>
+        <div class="ul-wc-body">
+          <span class="ul-wc-tag">Travel</span>
+          <h4 class="ul-wc-title">Two weeks post-launch: zero bookings. The product wasn't broken — it was incomplete.</h4>
+          <p class="ul-wc-desc">A travel platform's new package product had top-of-funnel engagement but zero conversions. Behavioral data revealed a navigation blind spot: interested users had no way to find their way back to packages they'd already viewed.</p>
+          <div class="ul-wc-metric">
+            <span class="ul-wc-num">Days</span>
+            <span class="ul-wc-meta">from research delivery to navigation fix shipped</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 4: Inspiration Hub -->
+      <a class="ul-wc" href="userlens-case-retail-inspiration.html" target="_blank" rel="noopener">
+        <span class="ul-wc-cta">Read story →</span>
+        <div class="ul-wc-stripe"></div>
+        <div class="ul-wc-body">
+          <span class="ul-wc-tag">Retail · Engagement</span>
+          <h4 class="ul-wc-title">Users were falling into a fashion rabbit hole. The app was making it worse.</h4>
+          <p class="ul-wc-desc">A fashion retailer envisioned an Inspiration Hub to keep users engaged beyond shopping. A two-week diary study with 12 participants revealed how users actually seek inspiration — and what a personalized hub had to feel like to break the pattern.</p>
+          <div class="ul-wc-metric">
+            <span class="ul-wc-num">17%</span>
+            <span class="ul-wc-meta">increase in time spent in-app within the first month</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 5: Rack Checkout -->
+      <a class="ul-wc" href="userlens-case-retail-checkout.html" target="_blank" rel="noopener">
+        <span class="ul-wc-cta">Read story →</span>
+        <div class="ul-wc-stripe"></div>
+        <div class="ul-wc-body">
+          <span class="ul-wc-tag">Retail · Operations</span>
+          <h4 class="ul-wc-title">The new checkout flow worked in testing. Staff couldn't use it on the floor.</h4>
+          <p class="ul-wc-desc">A new promotional discounts flow was designed to speed up checkout. In-store usability testing and live transaction observation with 7 staff members uncovered four critical gaps before a broader rollout could cause real damage.</p>
+          <div class="ul-wc-metric">
+            <span class="ul-wc-num">4</span>
+            <span class="ul-wc-meta">critical friction points identified and resolved pre-rollout</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 6: WealthBar Dashboard -->
+      <a class="ul-wc" href="userlens-case-fintech-dashboard.html" target="_blank" rel="noopener">
+        <span class="ul-wc-cta">Read story →</span>
+        <div class="ul-wc-stripe"></div>
+        <div class="ul-wc-body">
+          <span class="ul-wc-tag">FinTech · Wealth Management</span>
+          <h4 class="ul-wc-title">Investors were logging into their dashboard and leaving more confused than before.</h4>
+          <p class="ul-wc-desc">Annual satisfaction surveys flagged dashboard confusion year after year. Research with investors across portfolio sizes and experience levels surfaced four distinct gaps between what the dashboard showed and what users needed to feel in control.</p>
+          <div class="ul-wc-metric">
+            <span class="ul-wc-num">2</span>
+            <span class="ul-wc-meta">purpose-built views shifting clarity from confusion to confidence</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 7: Ryokan -->
+      <a class="ul-wc" href="userlens-case-travel-ryokan.html" target="_blank" rel="noopener">
+        <span class="ul-wc-cta">Read story →</span>
+        <div class="ul-wc-stripe"></div>
+        <div class="ul-wc-body">
+          <span class="ul-wc-tag">Travel · International</span>
+          <h4 class="ul-wc-title">The listing said "breakfast included." It was a 30-course seasonal Kaiseki ceremony.</h4>
+          <p class="ul-wc-desc">International travelers were discovering ryokans but not booking. Research with travelers from Korea, China, and Taiwan found the gap wasn't price — it was how a culturally rich, once-in-a-lifetime dining experience was being described as a checkbox.</p>
+          <div class="ul-wc-metric">
+            <span class="ul-wc-num">3</span>
+            <span class="ul-wc-meta">international markets where booking confidence shifted after reframe</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 8: Rack Loyalty -->
+      <a class="ul-wc" href="userlens-case-retail-loyalty.html" target="_blank" rel="noopener">
+        <span class="ul-wc-cta">Read story →</span>
+        <div class="ul-wc-stripe"></div>
+        <div class="ul-wc-body">
+          <span class="ul-wc-tag">Retail · Loyalty</span>
+          <h4 class="ul-wc-title">The 14-day early access perk was real. Nobody at the store knew how to activate it.</h4>
+          <p class="ul-wc-desc">A loyalty program's early access feature had clear value on paper but inconsistent results in practice. Diary studies, in-store observation, and journey mapping revealed three distinct member behaviors — and a critical gap at the point of sale.</p>
+          <div class="ul-wc-metric">
+            <span class="ul-wc-num">3</span>
+            <span class="ul-wc-meta">distinct shopper behaviors mapped across the full loyalty journey</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 9: CRE Benchmarking -->
+      <a class="ul-wc" href="userlens-case-realestate-benchmarking.html" target="_blank" rel="noopener">
+        <span class="ul-wc-cta">Read story →</span>
+        <div class="ul-wc-stripe"></div>
+        <div class="ul-wc-body">
+          <span class="ul-wc-tag">Real Estate · Enterprise</span>
+          <h4 class="ul-wc-title">The benchmarking tool was solving half the problem. Research surfaced the other half.</h4>
+          <p class="ul-wc-desc">A global real estate organization was building an internal tool for facility design benchmarking. Discovery research across Design, Standards, and Operations teams uncovered a second foundational need the product scope had missed — before a line of code was written.</p>
+          <div class="ul-wc-metric">
+            <span class="ul-wc-num">4</span>
+            <span class="ul-wc-meta">strategic insights that reshaped the product vision pre-development</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 10: CRE Portfolio Intelligence -->
+      <a class="ul-wc" href="userlens-case-realestate-portfolio.html" target="_blank" rel="noopener">
+        <span class="ul-wc-cta">Read story →</span>
+        <div class="ul-wc-stripe"></div>
+        <div class="ul-wc-body">
+          <span class="ul-wc-tag">Real Estate · Enterprise</span>
+          <h4 class="ul-wc-title">Before strategic planning, teams needed reliable data. That problem had to come first.</h4>
+          <p class="ul-wc-desc">A site selection tool was expanding into a portfolio intelligence platform. A JTBD study across Transaction Managers, Asset Managers, and Strategic Portfolio Leads clarified who the platform was building for — and in what order.</p>
+          <div class="ul-wc-metric">
+            <span class="ul-wc-num">3</span>
+            <span class="ul-wc-meta">real user roles grounding the sequenced build strategy</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- Dot indicators -->
+  <div class="ul-work-dots" id="ul-work-dots">
+    <button class="ul-work-dot active" data-idx="0" aria-label="Go to card 1"></button>
+    <button class="ul-work-dot" data-idx="1" aria-label="Go to card 2"></button>
+    <button class="ul-work-dot" data-idx="2" aria-label="Go to card 3"></button>
+    <button class="ul-work-dot" data-idx="3" aria-label="Go to card 4"></button>
+    <button class="ul-work-dot" data-idx="4" aria-label="Go to card 5"></button>
+    <button class="ul-work-dot" data-idx="5" aria-label="Go to card 6"></button>
+    <button class="ul-work-dot" data-idx="6" aria-label="Go to card 7"></button>
+    <button class="ul-work-dot" data-idx="7" aria-label="Go to card 8"></button>
+    <button class="ul-work-dot" data-idx="8" aria-label="Go to card 9"></button>
+    <button class="ul-work-dot" data-idx="9" aria-label="Go to card 10"></button>
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════════
+     ABOUT
+══════════════════════════════════════ -->
+<section id="ul-about" class="ul-section" style="background:#fff">
+  <div class="ul-about-wrap">
+
+    <div class="ul-about-vis ul-rv">
+      <div class="ul-about-img">
+        <div class="ul-about-img-inner">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="72" r="38" stroke="#3D5FE0" stroke-width="2"/>
+            <path d="M36 180c0-35.346 28.654-64 64-64s64 28.654 64 64" stroke="#3D5FE0" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+      <div class="ul-about-badge">
+        <div class="ul-ab-num">12+</div>
+        <div class="ul-ab-lbl">years in CX &<br>product strategy</div>
+      </div>
+      <div class="ul-about-stats">
+        <div class="ul-astat">
+          <div class="ul-astat-n" data-count="50" data-suffix="+">50+</div>
+          <div class="ul-astat-l">Clients across industries</div>
+        </div>
+        <div class="ul-astat">
+          <div class="ul-astat-n" data-count="500" data-suffix="+">500+</div>
+          <div class="ul-astat-l">Customer research sessions</div>
+        </div>
+        <div class="ul-astat">
+          <div class="ul-astat-n" data-count="10" data-suffix="+">10+</div>
+          <div class="ul-astat-l">Industries served</div>
+        </div>
+        <div class="ul-astat">
+          <div class="ul-astat-n">100%</div>
+          <div class="ul-astat-l">Evidence-first approach</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ul-about-text ul-rv d2">
+      <p class="ul-section-label">About the Founder</p>
+      <h2 class="ul-h2">Built on 12+ years inside the room where product decisions get made</h2>
+      <p>I'm <strong>Archie (Archana)</strong> — the founder and lead strategist at UserLens. For over 12 years, I've embedded inside the product teams shaping how millions of people shop, travel, invest, and live — at organizations including <strong>Amazon</strong>, <strong>Booking.com</strong>, <strong>Nordstrom</strong>, <strong>XPO Logistics</strong>, <strong>WealthBar</strong>, and <strong>Credential Financial</strong>.</p>
+      <p>From early-stage startups to global enterprise organizations, I've sat in the room where the hard product decisions get made. I've watched brilliant teams invest in the wrong thing — not because they lacked skill, but because they were missing real evidence about what their customers actually needed.</p>
+      <p>That's why I built UserLens. I don't just run research — I translate what your customers are telling you into clarity that moves leadership to act. Every engagement is led by me directly. You get strategic thinking at every step — not a junior team running a template.</p>
+      <div class="ul-philosophy">
+        <p>"The best business decisions aren't just smart — they're backed. I help leaders build that backing before it's too late to use it."</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     TESTIMONIALS
+══════════════════════════════════════ -->
+<section id="ul-testimonials" class="ul-section" style="background:#fff">
+
+  <div class="ul-hdr ul-rv">
+    <p class="ul-section-label">What others say</p>
+    <h2 class="ul-h2">Trusted by product and strategy teams at leading organizations</h2>
+  </div>
+
+  <div class="ul-test-grid">
+
+    <!-- Booking.com PM -->
+    <div class="ul-tc ul-rv d1">
+      <div class="ul-tc-mark">"</div>
+      <p class="ul-tc-quote">Her insights shaped key decisions, including a customer journey map that became a crucial tool for driving alignment. Thanks to her work, we built a solid roadmap, streamlined our MVP, and ensured a strong user experience. Archie is a thoughtful, strategic, and impact-driven researcher.</p>
+      <div class="ul-tc-attr">
+        <span class="ul-tc-company">Booking.com</span>
+        <span class="ul-tc-role">Senior Product Manager</span>
+      </div>
+    </div>
+
+    <!-- Nordstrom Head of UX -->
+    <div class="ul-tc ul-rv d2">
+      <div class="ul-tc-mark">"</div>
+      <p class="ul-tc-quote">I saw Archie repeatedly lead project teams through complex problem spaces — not only uncovering critical insights that greatly improve the end user experience, but also unifying a diverse set of stakeholders who came in with very different visions and goals for the end product.</p>
+      <div class="ul-tc-attr">
+        <span class="ul-tc-company">Nordstrom</span>
+        <span class="ul-tc-role">Head of UX Research</span>
+      </div>
+    </div>
+
+    <!-- Nordstrom Rack PM -->
+    <div class="ul-tc ul-rv d3">
+      <div class="ul-tc-mark">"</div>
+      <p class="ul-tc-quote">Her ability to uncover deep user insights and translate them into actionable recommendations was invaluable. Archie has a rare talent for balancing qualitative and quantitative research — ensuring we weren't designing based on assumptions, but truly addressing user needs. Her findings directly influenced key product decisions.</p>
+      <div class="ul-tc-attr">
+        <span class="ul-tc-company">Nordstrom Rack</span>
+        <span class="ul-tc-role">Senior Product Manager</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CTA
+══════════════════════════════════════ -->
+<section id="ul-cta" class="ul-section">
+
+  <div class="ul-orb-field" aria-hidden="true">
+    <div class="ul-orb ul-orb-blue   anim-a" style="width:520px;height:520px;top:-120px;right:5%"></div>
+    <div class="ul-orb ul-orb-indigo anim-b" style="width:320px;height:320px;bottom:-60px;left:8%"></div>
+  </div>
+
+  <div class="ul-cta-inner ul-rv">
+    <p class="ul-section-label">Start here</p>
+    <h2 class="ul-h2">Book a 30-minute discovery call.</h2>
+    <p class="ul-cta-body">
+      Archie will take time to understand where you are — the decisions you're facing, what's at stake, and what's driving the pressure. She'll then tell you honestly whether UserLens is the right fit, and exactly what working together would look like.
+    </p>
+    <div class="ul-cta-btns">
+      <a href="https://calendly.com/archie-connect/30min" target="_blank" rel="noopener" class="ul-btn-white">
+        Book a Discovery Call
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#ul-work" class="ul-btn-ghost">See the work <span>→</span></a>
+    </div>
+    <p class="ul-cta-note">No pitch decks. No commitment. Just an honest conversation.</p>
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer id="ul-footer">
+  <div class="ul-foot-logo">
+    <svg width="20" height="20" viewBox="0 0 28 28" fill="none" aria-hidden="true" style="opacity:.65">
+      <circle cx="12" cy="12" r="9.5" stroke="var(--accent-lt)" stroke-width="1.5" stroke-dasharray="5 2.5"/>
+      <circle cx="12" cy="12" r="6.5" stroke="var(--accent-lt)" stroke-width="1.8" fill="rgba(110,143,245,.1)"/>
+      <circle cx="12" cy="12" r="3" fill="rgba(110,143,245,.2)" stroke="var(--accent-lt)" stroke-width="1.2"/>
+      <circle cx="12" cy="12" r="1.3" fill="var(--accent-lt)"/>
+      <line x1="17" y1="17" x2="25" y2="25" stroke="var(--accent-lt)" stroke-width="2.2" stroke-linecap="round"/>
+    </svg>
+    User<span>Lens</span>
+  </div>
+  <div class="ul-foot-links">
+    <a href="#ul-zones">Services</a>
+    <a href="#ul-work">Work</a>
+    <a href="#ul-about">About</a>
+    <a href="mailto:hello@userlens.ca">Contact</a>
+  </div>
+  <p class="ul-foot-copy">© 2025 UserLens. All rights reserved.</p>
+</footer>
+
+<!-- ══════════════════════════════════════
+     SCRIPTS
+══════════════════════════════════════ -->
+<script>
+/* ── Cursor ── */
+const dot=document.getElementById('ul-dot'),ring=document.getElementById('ul-ring');
+let rx=0,ry=0,mx=0,my=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
+(function rafRing(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(rafRing);})();
+document.querySelectorAll('a,button').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{ring.style.width='50px';ring.style.height='50px';dot.style.opacity='0'});
+  el.addEventListener('mouseleave',()=>{ring.style.width='34px';ring.style.height='34px';dot.style.opacity='1'});
+});
+
+/* ── Nav scroll ── */
+const nav=document.getElementById('ul-nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('stuck',window.scrollY>40)},{passive:true});
+
+/* ── Word cycling ── */
+const words=['business owners','product leaders','technology executives','leadership teams','startup founders'];
+let wIdx=0;
+const wordEl=document.getElementById('ul-word');
+setInterval(()=>{
+  wordEl.style.opacity='0';wordEl.style.transform='translateY(-8px)';
+  setTimeout(()=>{
+    wIdx=(wIdx+1)%words.length;
+    wordEl.textContent=words[wIdx];
+    wordEl.style.opacity='1';wordEl.style.transform='translateY(0)';
+  },320);
+},3200);
+
+/* ── Count-up ── */
+function countUp(el){
+  if(el.dataset.counted)return;el.dataset.counted='1';
+  const target=parseFloat(el.dataset.count),suffix=el.dataset.suffix||'',dur=1800,start=performance.now();
+  const tick=now=>{
+    const p=Math.min((now-start)/dur,1),ease=1-Math.pow(1-p,3);
+    el.textContent=Math.floor(ease*target)+suffix;
+    if(p<1)requestAnimationFrame(tick);else el.textContent=target+suffix;
+  };
+  requestAnimationFrame(tick);
+}
+
+/* ── Reveal on scroll + count-up trigger ── */
+const ro=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('on');
+      e.target.querySelectorAll('[data-count]').forEach(countUp);
+      ro.unobserve(e.target);
+    }
+  });
+},{threshold:.18});
+document.querySelectorAll('.ul-rv').forEach(el=>ro.observe(el));
+
+/* ── Mouse parallax on hero ── */
+const heroVis=document.querySelector('.ul-hero-vis');
+document.getElementById('ul-hero').addEventListener('mousemove',e=>{
+  const x=(e.clientX/window.innerWidth-.5)*24,y=(e.clientY/window.innerHeight-.5)*24;
+  if(heroVis)heroVis.style.transform=`translateY(-50%) translate(${x*.45}px,${y*.45}px)`;
+},{passive:true});
+
+/* ── Stat card floating class ── */
+document.querySelectorAll('.ul-fsc').forEach((c,i)=>{
+  setTimeout(()=>{
+    c.style.opacity='1';
+    // floating handled by CSS animation already
+  },(1500+i*200));
+});
+
+/* ── Work Carousel ── */
+(function(){
+  const track  = document.getElementById('ul-work-track');
+  const prevBtn= document.getElementById('ul-wprev');
+  const nextBtn= document.getElementById('ul-wnext');
+  const counter= document.getElementById('ul-wnav-count');
+  const dots   = document.querySelectorAll('.ul-work-dot');
+  const cards  = [...track.querySelectorAll('.ul-wc')];
+  const TOTAL  = cards.length;
+  const GAP    = 20; /* px — matches CSS gap:1.25rem ~= 20px */
+  let idx = 0;
+
+  function visibleCount(){
+    if(window.innerWidth >= 960) return 3;
+    if(window.innerWidth >= 620) return 2;
+    return 1;
+  }
+
+  /* Compute and stamp exact pixel widths so 3 cards always fill the viewport */
+  function setCardSize(){
+    const vis   = visibleCount();
+    const wrap  = track.parentElement.offsetWidth;
+    const cardW = Math.floor((wrap - GAP * (vis - 1)) / vis);
+    cards.forEach(c => { c.style.minWidth = cardW + 'px'; c.style.maxWidth = cardW + 'px'; });
+    return cardW;
+  }
+
+  function goTo(n){
+    const vis    = visibleCount();
+    const cardW  = setCardSize();
+    idx = Math.max(0, Math.min(n, TOTAL - vis));
+    const step   = cardW + GAP;
+    track.style.transform = `translateX(-${step * idx}px)`;
+    prevBtn.disabled = idx === 0;
+    nextBtn.disabled = idx >= TOTAL - vis;
+    counter.textContent = `${idx + 1} / ${TOTAL}`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+  }
+
+  prevBtn.addEventListener('click', () => goTo(idx - 1));
+  nextBtn.addEventListener('click', () => goTo(idx + 1));
+  dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.idx)));
+
+  /* Drag / swipe */
+  let startX = null, startIdx = 0;
+  track.addEventListener('mousedown', e => { startX = e.clientX; startIdx = idx; track.classList.add('dragging'); });
+  document.addEventListener('mousemove', e => {
+    if(startX === null) return;
+    const cardW = cards[0].offsetWidth;
+    const step  = cardW + GAP;
+    const vis   = visibleCount();
+    const diff  = startX - e.clientX;
+    const clampedIdx = Math.max(0, Math.min(startIdx + diff / step, TOTAL - vis));
+    track.style.transform = `translateX(-${step * clampedIdx}px)`;
+  });
+  document.addEventListener('mouseup', e => {
+    if(startX === null) return;
+    const diff = startX - e.clientX;
+    if(diff > 60) goTo(idx + 1);
+    else if(diff < -60) goTo(idx - 1);
+    else goTo(idx);
+    startX = null;
+    track.classList.remove('dragging');
+  });
+
+  /* Touch */
+  let touchX = null;
+  track.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, {passive:true});
+  track.addEventListener('touchend',   e => {
+    if(touchX === null) return;
+    const diff = touchX - e.changedTouches[0].clientX;
+    if(diff > 50) goTo(idx + 1);
+    else if(diff < -50) goTo(idx - 1);
+    else goTo(idx);
+    touchX = null;
+  });
+
+  window.addEventListener('resize', () => goTo(idx), {passive:true});
+
+  /* Init — wait one frame so layout is fully painted */
+  requestAnimationFrame(() => goTo(0));
+})();
+</script>
+</body>
+<script>
+/* ── Cursor ── */
+const dot=document.getElementById('ul-dot'),ring=document.getElementById('ul-ring');
+let rx=0,ry=0,mx=0,my=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
+(function rafRing(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(rafRing);})();
+document.querySelectorAll('a,button').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{ring.style.width='50px';ring.style.height='50px';dot.style.opacity='0'});
+  el.addEventListener('mouseleave',()=>{ring.style.width='34px';ring.style.height='34px';dot.style.opacity='1'});
+});
+
+/* ── Nav scroll ── */
+const nav=document.getElementById('ul-nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('stuck',window.scrollY>40)},{passive:true});
+
+/* ── Word cycling ── */
+const words=['business owners','product leaders','technology executives','leadership teams','startup founders'];
+let wIdx=0;
+const wordEl=document.getElementById('ul-word');
+setInterval(()=>{
+  wordEl.style.opacity='0';wordEl.style.transform='translateY(-8px)';
+  setTimeout(()=>{
+    wIdx=(wIdx+1)%words.length;
+    wordEl.textContent=words[wIdx];
+    wordEl.style.opacity='1';wordEl.style.transform='translateY(0)';
+  },320);
+},3200);
+
+/* ── Count-up ── */
+function countUp(el){
+  if(el.dataset.counted)return;el.dataset.counted='1';
+  const target=parseFloat(el.dataset.count),suffix=el.dataset.suffix||'',dur=1800,start=performance.now();
+  const tick=now=>{
+    const p=Math.min((now-start)/dur,1),ease=1-Math.pow(1-p,3);
+    el.textContent=Math.floor(ease*target)+suffix;
+    if(p<1)requestAnimationFrame(tick);else el.textContent=target+suffix;
+  };
+  requestAnimationFrame(tick);
+}
+
+/* ── Reveal on scroll + count-up trigger ── */
+const ro=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('on');
+      e.target.querySelectorAll('[data-count]').forEach(countUp);
+      ro.unobserve(e.target);
+    }
+  });
+},{threshold:.18});
+document.querySelectorAll('.ul-rv').forEach(el=>ro.observe(el));
+
+/* ── Mouse parallax on hero ── */
+const heroVis=document.querySelector('.ul-hero-vis');
+document.getElementById('ul-hero').addEventListener('mousemove',e=>{
+  const x=(e.clientX/window.innerWidth-.5)*24,y=(e.clientY/window.innerHeight-.5)*24;
+  if(heroVis)heroVis.style.transform=`translateY(-50%) translate(${x*.45}px,${y*.45}px)`;
+},{passive:true});
+
+/* ── Stat card floating class ── */
+document.querySelectorAll('.ul-fsc').forEach((c,i)=>{
+  setTimeout(()=>{
+    c.style.opacity='1';
+    // floating handled by CSS animation already
+  },(1500+i*200));
+});
+
+/* ── Work Carousel ── */
+(function(){
+  const track  = document.getElementById('ul-work-track');
+  const prevBtn= document.getElementById('ul-wprev');
+  const nextBtn= document.getElementById('ul-wnext');
+  const counter= document.getElementById('ul-wnav-count');
+  const dots   = document.querySelectorAll('.ul-work-dot');
+  const cards  = [...track.querySelectorAll('.ul-wc')];
+  const TOTAL  = cards.length;
+  const GAP    = 20; /* px — matches CSS gap:1.25rem ~= 20px */
+  let idx = 0;
+
+  function visibleCount(){
+    if(window.innerWidth >= 960) return 3;
+    if(window.innerWidth >= 620) return 2;
+    return 1;
+  }
+
+  /* Compute and stamp exact pixel widths so 3 cards always fill the viewport */
+  function setCardSize(){
+    const vis   = visibleCount();
+    const wrap  = track.parentElement.offsetWidth;
+    const cardW = Math.floor((wrap - GAP * (vis - 1)) / vis);
+    cards.forEach(c => { c.style.minWidth = cardW + 'px'; c.style.maxWidth = cardW + 'px'; });
+    return cardW;
+  }
+
+  function goTo(n){
+    const vis    = visibleCount();
+    const cardW  = setCardSize();
+    idx = Math.max(0, Math.min(n, TOTAL - vis));
+    const step   = cardW + GAP;
+    track.style.transform = `translateX(-${step * idx}px)`;
+    prevBtn.disabled = idx === 0;
+    nextBtn.disabled = idx >= TOTAL - vis;
+    counter.textContent = `${idx + 1} / ${TOTAL}`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+  }
+
+  prevBtn.addEventListener('click', () => goTo(idx - 1));
+  nextBtn.addEventListener('click', () => goTo(idx + 1));
+  dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.idx)));
+
+  /* Drag / swipe */
+  let startX = null, startIdx = 0;
+  track.addEventListener('mousedown', e => { startX = e.clientX; startIdx = idx; track.classList.add('dragging'); });
+  document.addEventListener('mousemove', e => {
+    if(startX === null) return;
+    const cardW = cards[0].offsetWidth;
+    const step  = cardW + GAP;
+    const vis   = visibleCount();
+    const diff  = startX - e.clientX;
+    const clampedIdx = Math.max(0, Math.min(startIdx + diff / step, TOTAL - vis));
+    track.style.transform = `translateX(-${step * clampedIdx}px)`;
+  });
+  document.addEventListener('mouseup', e => {
+    if(startX === null) return;
+    const diff = startX - e.clientX;
+    if(diff > 60) goTo(idx + 1);
+    else if(diff < -60) goTo(idx - 1);
+    else goTo(idx);
+    startX = null;
+    track.classList.remove('dragging');
+  });
+
+  /* Touch */
+  let touchX = null;
+  track.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, {passive:true});
+  track.addEventListener('touchend',   e => {
+    if(touchX === null) return;
+    const diff = touchX - e.changedTouches[0].clientX;
+    if(diff > 50) goTo(idx + 1);
+    else if(diff < -50) goTo(idx - 1);
+    else goTo(idx);
+    touchX = null;
+  });
+
+  window.addEventListener('resize', () => goTo(idx), {passive:true});
+
+  /* Init — wait one frame so layout is fully painted */
+  requestAnimationFrame(() => goTo(0));
+})();
+</script>
