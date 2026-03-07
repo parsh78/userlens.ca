@@ -1,0 +1,33 @@
+THE GIST SECTION - Travel Case Study
+Generated from: US travelers going to Cancun case study
+
+========================================
+PROBLEM (Red dot):
+========================================
+A travel platform had solid acquisition and first booking numbers, but repeat booking rates were below target. Leadership wanted to improve retention without adding more features — but didn't have evidence for what was actually driving customers to return or drift to competitors.
+
+========================================
+APPROACH (Blue dot):
+========================================
+Ran a full customer journey engagement — longitudinal interviews at three points (before booking, immediately after, weeks later), mapped loyalty and loss moments across the entire experience, and delivered a prioritized CX strategy framework showing which moments mattered most to retention.
+
+========================================
+OUTCOME (Green dot):
+========================================
+Three existing product touchpoints redesigned and two new ones introduced specifically around loyalty drivers. Result: 17% lift in engagement and return booking rates, 30% reduction in unsubscribe rates, and a reusable customer journey map for evaluating future initiatives.
+
+========================================
+ADDITIONAL CONTEXT FROM CASE STUDY:
+========================================
+
+Key moments identified:
+1. Post-booking personalized messages → Built loyalty
+2. Post-trip silence → Destroyed loyalty
+3. Problem resolution that was quick & personal → Built loyalty most
+4. Generic promotional emails → Destroyed loyalty
+
+Specific touchpoints/changes needed for "What Changed" section:
+- Three existing touchpoints redesigned (need specific details from user)
+- Two new touchpoints introduced (need specific details from user)
+- Post-trip communication strategy rebuilt
+- Product roadmap reprioritized (deprioritized 2 feature builds in favor of CX repairs)

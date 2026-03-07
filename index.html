@@ -462,6 +462,33 @@ a{text-decoration:none}
 }
 .ul-work-dot.active{width:22px;border-radius:4px;background:var(--accent-lt)}
 
+/* ─── WORK CAROUSEL FILTERS ─── */
+.ul-work-filters{
+  display:flex;align-items:center;gap:.75rem;
+  margin-bottom:2rem;overflow-x:auto;padding-bottom:.5rem;
+  scroll-behavior:smooth;-webkit-overflow-scrolling:touch;
+}
+.ul-work-filters::-webkit-scrollbar{height:3px}
+.ul-work-filters::-webkit-scrollbar-track{background:transparent}
+.ul-work-filters::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1);border-radius:3px}
+.ul-filter-btn{
+  flex-shrink:0;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+  color:rgba(255,255,255,.6);font-size:.8rem;font-weight:600;
+  padding:.5rem 1.25rem;border-radius:100px;
+  cursor:pointer;transition:all .2s var(--ease);
+  letter-spacing:.05em;text-transform:uppercase;white-space:nowrap;
+}
+.ul-filter-btn:hover{
+  background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.18);
+  color:rgba(255,255,255,.75);
+}
+.ul-filter-btn.active{
+  background:var(--accent);border-color:var(--accent);
+  color:#fff;box-shadow:0 4px 16px rgba(61,95,224,.3);
+}
+.ul-wc.hidden{display:none}
+
 /* ─── ABOUT ─── */
 #ul-about{background:#fff}
 .ul-about-wrap{
@@ -1063,12 +1090,21 @@ a{text-decoration:none}
     </div>
   </div>
 
+  <!-- Filter buttons -->
+  <div class="ul-work-filters" id="ul-work-filters">
+    <button class="ul-filter-btn active" data-filter="all" aria-label="Show all case studies">All</button>
+    <button class="ul-filter-btn" data-filter="fintech" aria-label="Show FinTech case studies">FinTech</button>
+    <button class="ul-filter-btn" data-filter="retail" aria-label="Show Retail case studies">Retail</button>
+    <button class="ul-filter-btn" data-filter="real-estate" aria-label="Show Real Estate case studies">Real Estate</button>
+    <button class="ul-filter-btn" data-filter="methodology" aria-label="Show Methodology case studies">Methodology</button>
+  </div>
+
   <!-- Carousel track -->
   <div class="ul-work-track-wrap">
     <div class="ul-work-track" id="ul-work-track">
 
       <!-- 1: FinTech Onboarding -->
-      <a class="ul-wc" href="userlens-case-fintech.html" target="_blank" rel="noopener">
+      <a class="ul-wc" href="userlens-case-fintech.html" target="_blank" rel="noopener" data-industry="fintech">
         <span class="ul-wc-cta">Read story →</span>
         <div class="ul-wc-img"><img src="images/onboarding_exp_trading_platform_finance_cx.jpg" alt="Trading platform onboarding research" loading="lazy"/></div>
         <div class="ul-wc-stripe"></div>
@@ -1084,7 +1120,7 @@ a{text-decoration:none}
       </a>
 
       <!-- 2: Retail Stylist Tool JTBD -->
-      <a class="ul-wc" href="userlens-case-retail.html" target="_blank" rel="noopener">
+      <a class="ul-wc" href="userlens-case-retail.html" target="_blank" rel="noopener" data-industry="retail">
         <span class="ul-wc-cta">Read story →</span>
         <div class="ul-wc-img"><img src="images/stylist_tool_jtbd_retail_cx.jpg" alt="Retail stylist tool JTBD research" loading="lazy"/></div>
         <div class="ul-wc-stripe"></div>
@@ -1099,24 +1135,8 @@ a{text-decoration:none}
         </div>
       </a>
 
-      <!-- 3: Travel Packages -->
-      <a class="ul-wc" href="userlens-case-travel.html" target="_blank" rel="noopener">
-        <span class="ul-wc-cta">Read story →</span>
-        <div class="ul-wc-img"><img src="images/package_booking_traveller_cx.jpg" alt="Travel package booking research" loading="lazy"/></div>
-        <div class="ul-wc-stripe"></div>
-        <div class="ul-wc-body">
-          <span class="ul-wc-tag">Travel</span>
-          <h4 class="ul-wc-title">Phase 1 launched for US travelers heading to Cancun. Two weeks in — zero bookings.</h4>
-          <p class="ul-wc-desc">The product existed. Users were finding it. They just had no way to come back. Behavioral data told the whole story — and the fix took days, not months.</p>
-          <div class="ul-wc-metric">
-            <span class="ul-wc-num">26%</span>
-            <span class="ul-wc-meta">return visits in first week after navigation fix</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- 4: Inspiration Hub -->
-      <a class="ul-wc" href="userlens-case-inspiration.html" target="_blank" rel="noopener">
+      <!-- 3: Inspiration Hub -->
+      <a class="ul-wc" href="userlens-case-inspiration.html" target="_blank" rel="noopener" data-industry="retail">
         <span class="ul-wc-cta">Read story →</span>
         <div class="ul-wc-img"><img src="images/inspiration_hub_retail_cx_experience.jpg" alt="Retail inspiration hub research" loading="lazy"/></div>
         <div class="ul-wc-stripe"></div>
@@ -1132,7 +1152,7 @@ a{text-decoration:none}
       </a>
 
       <!-- 5: Rack Checkout -->
-      <a class="ul-wc" href="userlens-case-checkout.html" target="_blank" rel="noopener">
+      <a class="ul-wc" href="userlens-case-checkout.html" target="_blank" rel="noopener" data-industry="retail">
         <span class="ul-wc-cta">Read story →</span>
         <div class="ul-wc-img"><img src="images/checkout_exp_retail_cx.jpg" alt="Retail checkout experience research" loading="lazy"/></div>
         <div class="ul-wc-stripe"></div>
@@ -1148,7 +1168,7 @@ a{text-decoration:none}
       </a>
 
       <!-- 6: WealthBar Dashboard -->
-      <a class="ul-wc" href="userlens-case-wealth.html" target="_blank" rel="noopener">
+      <a class="ul-wc" href="userlens-case-wealth.html" target="_blank" rel="noopener" data-industry="fintech">
         <span class="ul-wc-cta">Read story →</span>
         <div class="ul-wc-img"><img src="images/investor_dashboard_exp_wealth_mgm_finance_cx.jpg" alt="Investor dashboard wealth management research" loading="lazy"/></div>
         <div class="ul-wc-stripe"></div>
@@ -1163,24 +1183,8 @@ a{text-decoration:none}
         </div>
       </a>
 
-      <!-- 7: Ryokan -->
-      <a class="ul-wc" href="userlens-case-ryokan.html" target="_blank" rel="noopener">
-        <span class="ul-wc-cta">Read story →</span>
-        <div class="ul-wc-img"><img src="images/ryokan_travel_exp.jpg" alt="Ryokan travel experience research" loading="lazy"/></div>
-        <div class="ul-wc-stripe"></div>
-        <div class="ul-wc-body">
-          <span class="ul-wc-tag">Travel · International</span>
-          <h4 class="ul-wc-title">The listing said "breakfast included." It was a 30-course seasonal Kaiseki ceremony.</h4>
-          <p class="ul-wc-desc">A 30-course seasonal Kaiseki ceremony was listed as "breakfast included." International travelers from three countries explained what was being lost in translation — and what it actually took to earn their confidence.</p>
-          <div class="ul-wc-metric">
-            <span class="ul-wc-num">27%</span>
-            <span class="ul-wc-meta">increase in meal plan clicks and interactions</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- 8: Rack Loyalty -->
-      <a class="ul-wc" href="userlens-case-retail-loyalty.html" target="_blank" rel="noopener">
+      <!-- 7: Rack Loyalty -->
+      <a class="ul-wc" href="userlens-case-retail-loyalty.html" target="_blank" rel="noopener" data-industry="retail">
         <span class="ul-wc-cta">Read story →</span>
         <div class="ul-wc-img"><img src="images/loyalty_exp_retail_cx.jpg" alt="Retail loyalty experience research" loading="lazy"/></div>
         <div class="ul-wc-stripe"></div>
@@ -1196,7 +1200,7 @@ a{text-decoration:none}
       </a>
 
       <!-- 9: CRE Benchmarking -->
-      <a class="ul-wc" href="userlens-case-benchmarking.html" target="_blank" rel="noopener">
+      <a class="ul-wc" href="userlens-case-benchmarking.html" target="_blank" rel="noopener" data-industry="real-estate">
         <span class="ul-wc-cta">Read story →</span>
         <div class="ul-wc-img"><img src="images/real_estate_benchmarking_exp.jpg" alt="Real estate benchmarking research" loading="lazy"/></div>
         <div class="ul-wc-stripe"></div>
@@ -1211,24 +1215,8 @@ a{text-decoration:none}
         </div>
       </a>
 
-      <!-- 11: Resort Booking / Rapid Research -->
-      <a class="ul-wc" href="userlens-case-travel-resort.html" target="_blank" rel="noopener">
-        <span class="ul-wc-cta">Read story →</span>
-        <div class="ul-wc-img"><img src="images/travel_resort_booking_ex_rapid_research.jpg" alt="Resort booking rapid research" loading="lazy"/></div>
-        <div class="ul-wc-stripe"></div>
-        <div class="ul-wc-body">
-          <span class="ul-wc-tag">Travel · Rapid Research</span>
-          <h4 class="ul-wc-title">The resort team was shipping features for "families" and "couples" — without ever testing with either.</h4>
-          <p class="ul-wc-desc">Fast-moving teams don't always have time for full research cycles. A two-hour workshop replaced assumptions with real user scenarios — and delivered two direct product changes before a single line of code was written.</p>
-          <div class="ul-wc-metric">
-            <span class="ul-wc-num">2</span>
-            <span class="ul-wc-meta">product changes shipped — dynamic personalization and dedicated accessibility sections</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- 12: Research Prioritization Framework -->
-      <a class="ul-wc" href="userlens-case-research.html" target="_blank" rel="noopener">
+      <!-- 10: Research Prioritization Framework -->
+      <a class="ul-wc" href="userlens-case-research.html" target="_blank" rel="noopener" data-industry="methodology">
         <span class="ul-wc-cta">Read story →</span>
         <div class="ul-wc-img"><img src="images/research_prioritization.jpg" alt="Research prioritization framework methodology" loading="lazy"/></div>
         <div class="ul-wc-stripe"></div>
@@ -1244,7 +1232,7 @@ a{text-decoration:none}
       </a>
 
       <!-- 10: CRE Portfolio Intelligence -->
-      <a class="ul-wc" href="userlens-case-portfolio.html" target="_blank" rel="noopener">
+      <a class="ul-wc" href="userlens-case-portfolio.html" target="_blank" rel="noopener" data-industry="real-estate">
         <span class="ul-wc-cta">Read story →</span>
         <div class="ul-wc-img"><img src="images/portfolio_mgm_platform_real_estate_exp.jpg" alt="Real estate portfolio management research" loading="lazy"/></div>
         <div class="ul-wc-stripe"></div>
@@ -1273,9 +1261,6 @@ a{text-decoration:none}
     <button class="ul-work-dot" data-idx="6" aria-label="Go to card 7"></button>
     <button class="ul-work-dot" data-idx="7" aria-label="Go to card 8"></button>
     <button class="ul-work-dot" data-idx="8" aria-label="Go to card 9"></button>
-    <button class="ul-work-dot" data-idx="9" aria-label="Go to card 10"></button>
-    <button class="ul-work-dot" data-idx="10" aria-label="Go to card 11"></button>
-    <button class="ul-work-dot" data-idx="11" aria-label="Go to card 12"></button>
   </div>
 
 </section>
@@ -1660,6 +1645,52 @@ document.querySelectorAll('.ul-fsc').forEach((c,i)=>{
 
   /* Init — wait one frame so layout is fully painted */
   requestAnimationFrame(() => goTo(0));
+})();
+
+/* ── Work Carousel Filtering ── */
+(function(){
+  const filterBtns = document.querySelectorAll('.ul-filter-btn');
+  const cards = document.querySelectorAll('.ul-wc');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const selectedFilter = btn.dataset.filter;
+
+      // Update button states
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Filter and show/hide cards
+      let visibleCount = 0;
+      cards.forEach(card => {
+        const cardIndustry = card.dataset.industry;
+        const isVisible = selectedFilter === 'all' || cardIndustry === selectedFilter;
+
+        if(isVisible) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      // Reset carousel to first visible card
+      const track = document.getElementById('ul-work-track');
+      track.style.transform = 'translateX(0)';
+      const firstVisibleCard = cards[0];
+      if(firstVisibleCard && firstVisibleCard.classList.contains('hidden')) {
+        // Find first visible card and adjust if needed
+        for(let i = 0; i < cards.length; i++) {
+          if(!cards[i].classList.contains('hidden')) {
+            document.getElementById('ul-wnav-count').textContent = `1 / ${visibleCount}`;
+            break;
+          }
+        }
+      } else {
+        document.getElementById('ul-wnav-count').textContent = `1 / ${visibleCount}`;
+      }
+    });
+  });
 })();
 
 /* ── TESTIMONIALS AUTO-ROTATE ────────────────────────────────── */
