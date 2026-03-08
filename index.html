@@ -1836,9 +1836,11 @@ document.querySelectorAll('.ul-fsc').forEach((c,i)=>{
 </script>
 
 <!-- Cloudflare Turnstile -->
+<script src="https://www.google.com/recaptcha/api.js?render=6Lcif4MsAAAAAD3ps_A472BogAQXMQJX9cZaC6X5" async defer></script>
 <script>
-// ── Contact form → Formspree ──────────────────────────────────────────
+// ── Contact form → Formspree + reCAPTCHA v3 ───────────────────────────
 (function(){
+  const RECAPTCHA_KEY = '6Lcif4MsAAAAAD3ps_A472BogAQXMQJX9cZaC6X5';
   const form    = document.getElementById('ul-contact-form');
   const btn     = document.getElementById('ul-form-btn');
   const errMsg  = document.getElementById('ul-form-error');
@@ -1857,15 +1859,18 @@ document.querySelectorAll('.ul-fsc').forEach((c,i)=>{
     btn.textContent = 'Sending\u2026';
 
     try {
+      const token = await grecaptcha.execute(RECAPTCHA_KEY, { action: 'contact' });
+
       const res = await fetch('https://formspree.io/f/xyknzdeo', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({
-          name:    form.querySelector('[name="name"]').value,
-          company: form.querySelector('[name="company"]').value,
-          email:   form.querySelector('[name="email"]').value,
-          service: form.querySelector('[name="service"]').value,
-          message: form.querySelector('[name="message"]').value,
+          name:                  form.querySelector('[name="name"]').value,
+          company:               form.querySelector('[name="company"]').value,
+          email:                 form.querySelector('[name="email"]').value,
+          service:               form.querySelector('[name="service"]').value,
+          message:               form.querySelector('[name="message"]').value,
+          'g-recaptcha-response': token,
         })
       });
       const data = await res.json();
