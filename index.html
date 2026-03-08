@@ -654,9 +654,6 @@ a{text-decoration:none}
 .ul-form-submit:hover{background:var(--accent-dk);transform:translateY(-1px)}
 .ul-form-note{font-size:.7rem;color:rgba(210,220,240,.3);text-align:center;margin-top:.75rem}
 .ul-form-submit:disabled{opacity:.55;cursor:not-allowed;transform:none}
-/* turnstile */
-.ul-turnstile-wrap{margin:.85rem 0 .25rem}
-.cf-turnstile{border-radius:var(--r);overflow:hidden}
 /* form error */
 .ul-form-error{font-size:.78rem;color:#f87171;margin-top:.5rem;text-align:center;display:none}
 .ul-form-error.show{display:block}
@@ -1458,9 +1455,9 @@ a{text-decoration:none}
       <p>Archie will review your message and follow up personally — usually within 1–2 business days.</p>
 
       <!-- ── Contact Form ── -->
-      <form id="ul-contact-form" name="contact" method="POST" novalidate>
-        <!-- honeypot — leave hidden, catches basic bots -->
-        <p style="display:none"><input name="bot-field" tabindex="-1" autocomplete="off"/></p>
+      <form id="ul-contact-form" method="POST" novalidate>
+        <!-- honeypot for Formspree — leave hidden -->
+        <p style="display:none"><input name="_gotcha" tabindex="-1" autocomplete="off"/></p>
 
         <div class="ul-form-row">
           <div class="ul-form-field">
@@ -1492,16 +1489,7 @@ a{text-decoration:none}
           <textarea id="cf-message" name="message" placeholder="Share a bit about your situation, timeline, or what you're trying to figure out..."></textarea>
         </div>
 
-        <!-- Cloudflare Turnstile — replace data-sitekey with your key from dash.cloudflare.com -->
-        <div class="ul-turnstile-wrap">
-          <div class="cf-turnstile"
-               data-sitekey="YOUR_TURNSTILE_SITE_KEY"
-               data-theme="dark"
-               data-size="flexible">
-          </div>
-        </div>
-
-        <p class="ul-form-error" id="ul-form-error">Please complete the security check before sending.</p>
+        <p class="ul-form-error" id="ul-form-error">Something went wrong — please try again or email us directly.</p>
         <button type="submit" class="ul-form-submit" id="ul-form-btn">Send Message →</button>
         <p class="ul-form-note">We'll respond within 1–2 business days.</p>
       </form>
@@ -1848,10 +1836,8 @@ document.querySelectorAll('.ul-fsc').forEach((c,i)=>{
 </script>
 
 <!-- Cloudflare Turnstile -->
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-
 <script>
-// ── Contact form handler ──────────────────────────────────────────────
+// ── Contact form → Formspree ──────────────────────────────────────────
 (function(){
   const form    = document.getElementById('ul-contact-form');
   const btn     = document.getElementById('ul-form-btn');
@@ -1862,58 +1848,35 @@ document.querySelectorAll('.ul-fsc').forEach((c,i)=>{
   form.addEventListener('submit', async function(e){
     e.preventDefault();
 
-    // 1. Basic HTML5 validation
     if(!form.checkValidity()){
       form.reportValidity();
       return;
     }
-
-    // 2. Turnstile token check
-    const token = form.querySelector('[name="cf-turnstile-response"]');
-    if(!token || !token.value){
-      errMsg.classList.add('show');
-      return;
-    }
     errMsg.classList.remove('show');
-
-    // 3. Disable button while submitting
     btn.disabled = true;
     btn.textContent = 'Sending\u2026';
 
     try {
-      // ── TODO: replace with your real backend endpoint ──────────────
-      // The endpoint should:
-      //   1. Verify the Turnstile token server-side against Cloudflare API
-      //      POST https://challenges.cloudflare.com/turnstile/v0/siteverify
-      //      with secret key + token
-      //   2. Send / store the form data (email, Azure DB, etc.)
-      //
-      // const res = await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: {'Content-Type':'application/json'},
-      //   body: JSON.stringify({
-      //     name:    form.querySelector('[name="name"]').value,
-      //     company: form.querySelector('[name="company"]').value,
-      //     email:   form.querySelector('[name="email"]').value,
-      //     service: form.querySelector('[name="service"]').value,
-      //     message: form.querySelector('[name="message"]').value,
-      //     token:   token.value
-      //   })
-      // });
-      // if(!res.ok) throw new Error('Server error');
-      // ──────────────────────────────────────────────────────────────
+      const res = await fetch('https://formspree.io/f/xyknzdeo', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          name:    form.querySelector('[name="name"]').value,
+          company: form.querySelector('[name="company"]').value,
+          email:   form.querySelector('[name="email"]').value,
+          service: form.querySelector('[name="service"]').value,
+          message: form.querySelector('[name="message"]').value,
+        })
+      });
+      const data = await res.json();
+      if(!res.ok) throw new Error(data.error || 'Server error');
 
-      // TEMP: simulate success until backend is wired up
-      await new Promise(r => setTimeout(r, 800));
-
-      // 4. Show success state
       form.style.display = 'none';
       success.classList.add('show');
 
     } catch(err){
       btn.disabled = false;
       btn.textContent = 'Send Message \u2192';
-      errMsg.textContent = 'Something went wrong \u2014 please try again or email directly.';
       errMsg.classList.add('show');
     }
   });
