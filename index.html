@@ -1473,17 +1473,7 @@ a{text-decoration:none}
           <label for="cf-email">Email address</label>
           <input type="email" id="cf-email" name="email" placeholder="you@company.com" required/>
         </div>
-        <div class="ul-form-field" style="margin-bottom:.75rem">
-          <label for="cf-service">What are you working on?</label>
-          <select id="cf-service" name="service">
-            <option value="" disabled selected>Select an area...</option>
-            <option value="zone01">Validate a product or market decision</option>
-            <option value="zone02">Understand how our users interact with AI</option>
-            <option value="zone03">Understand what's breaking in the experience</option>
-            <option value="zone04">Build ongoing research capability</option>
-            <option value="other">Something else</option>
-          </select>
-        </div>
+
         <div class="ul-form-field">
           <label for="cf-message">Tell us more</label>
           <textarea id="cf-message" name="message" placeholder="Share a bit about your situation, timeline, or what you're trying to figure out..."></textarea>
@@ -1868,7 +1858,6 @@ document.querySelectorAll('.ul-fsc').forEach((c,i)=>{
           name:                  form.querySelector('[name="name"]').value,
           company:               form.querySelector('[name="company"]').value,
           email:                 form.querySelector('[name="email"]').value,
-          service:               form.querySelector('[name="service"]').value,
           message:               form.querySelector('[name="message"]').value,
           'g-recaptcha-response': token,
         })
